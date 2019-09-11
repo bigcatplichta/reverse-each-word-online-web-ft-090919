@@ -11,9 +11,9 @@ require 'pry'
 
 def reverse_each_word(string)
   word_list = string.split
-  word_list.collect do | word |
-    word = word.reverse
-    # binding.pry
+  reversed_words = []
+  word_list.each do | word |
+    reversed_words << word.reverse
   end
-  word_list.join(" ")
+  reversed_words.join(" ")
 end
